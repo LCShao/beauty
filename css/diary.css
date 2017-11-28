@@ -1,0 +1,233 @@
+.dairy-main{
+    width:100%;
+}
+.diary-body{
+    width:990px;
+    height:80px;
+    margin:0 auto;
+    position:relative;
+}
+.diary-body img{
+    float:left;
+}
+.diary-items{
+    list-style: none;
+    width:800px;
+    float:left;
+    display:flex;
+    justify-content: space-between;
+    margin-top:26px;
+}
+.sub-items{
+    list-style: none;
+    display:none;
+}
+.diary-items li,.sub-items li{
+    float:left;
+    width:58px;
+    height:40px;
+}
+.diary-items li a,.diary-body p a{
+    text-decoration:none;
+    color:#000;
+    font-size:14px;
+}
+.diary-body p{
+    float:right;
+}
+.dairy-main:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.diary-items li a.item-active {
+    color: #0aa1ed;
+}
+.diary-items li a:hover{
+    color: #0aa1ed;
+}
+#item-sublist{
+    display:block;
+    width:58px;
+}
+#diary-info{
+    width:960px;
+    margin:0 auto;
+    border-bottom:2px solid lightskyblue;
+}
+#diary-info a{
+    display:inline-block;
+    width:84px;
+    height:36px;
+    background:url("../img/picture2/community_tab_bg.png");
+    background-position:1px 38px;
+    color:dodgerblue;
+    font-size:18px;
+    line-height:36px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:8px 8px 0 0 ;
+}
+#diary-info a:nth-child(2),#diary-info a:nth-child(3){
+    margin-left:-4px;
+}
+#diary-info .diary-info-active,#diary-info a:hover{
+    background:url("../img/picture2/community_tab_bg.png");
+    background-position:1px 75px;
+    color:#fff;
+}
+/*主要信息*/
+#diary-mainInfo{
+    width:960px;
+    margin:0 auto;
+}
+#diary-mainInfo:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.diary-info-left{
+    float:left;
+    clear:left;
+    width:238px;
+    height:870px;
+}
+.diary-info-leftTop{
+    float:left;
+    width:238px;
+    height:100px;
+}
+.diary-info-right{
+    float:right;
+    width:718px;
+    height:1183px;
+    overflow:hidden;
+}
+.diary-info-left,.diary-info-leftTop{
+    border: solid 2px #f1fcfb;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+.diary-left-head{
+    font-size:16px;
+    padding:10px 10px 0;
+}
+.diary-left-body .left-title{
+    background:#ffa155;
+    color:#fff;
+}
+.diary-left-body a{
+    display:inline-block;
+    padding:0 10px;
+    height:28px;
+    line-height:26px;
+    background:#eaf8f6;
+    border-radius:8px;
+    margin:8px 8px;
+    font-size:14px;
+    color:#66c9be;
+    text-decoration:none;
+}
+.diary-right-title{
+    height:34px;
+    line-height:34px;
+    font-size:24px;
+    color:#48c2b7;
+    margin:6px 0 0 10px;
+    padding-bottom:50px;
+    border-bottom:1px solid #e1e1e1;
+}
+#line-left{
+    display:inline-block;
+    width:6px;
+    height:34px;
+    vertical-align:top;
+    background:#48c2b7;
+    border-radius:4px;
+    margin-right:20px;
+}
+/*右侧信息*/
+#diary-InfoC{
+    padding:0 0 0 10px;
+    margin:0;
+    height:900px;
+    overflow:hidden;
+}
+#diary-InfoC li{
+    width:730px;
+    height:125px;
+    border-bottom: solid 1px #e1e1e1;
+    padding: 24px 0 16px;
+    margin-left:0;
+    list-style:none;
+}
+#diary-InfoC li a{
+    text-decoration:none;
+    color:#66c9be;
+    font-size:16px;
+}
+#diary-InfoC .diary-content{
+    font-size:12px;
+}
+.doc-pic-name{
+    float: left;
+    width: 112px;
+}
+#diary-InfoC .doc-name{
+    display: block;
+    width: 112px;
+    text-align: center;
+    font-size: 18px;
+    color: #3c5a57;
+}
+#diary-InfoC img{
+    width:64px;
+    height:64px;
+    margin-left: 24px;
+}
+#diary-InfoC p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+.commonIcon{
+    width: 120px;
+    height: 60px;
+    background:red;
+    display: block;
+    border-radius:6px 0 0 6px;
+    position: relative;
+    transition: all 0.3s linear;
+}
+a.commonIcon,.commonIcon1{
+    color: #333;
+    text-decoration: none;
+    outline-style: none;
+    cursor: auto;
+    transition:all .5s linear;
+}
+.swtRirhgt {
+    width: 60px;
+    position: fixed;
+    right: 0;
+    top: 28%;
+    z-index: 9999;
+}
+a.commonIcon:hover{
+    left:-60px;
+}
+.swtZhuanjia {
+    background: url("../img/index/1.png") no-repeat #25c53f center center;
+}
+.xiangmu{
+    background: url("../img/index/1.png") no-repeat #25c53f center center;
+}
+.dianhua{
+    background: url("../img/index/1.png") no-repeat #25c53f center center;
+}
+.jiage{
+    background: url("../img/index/1.png") no-repeat #25c53f center center;
+}
+

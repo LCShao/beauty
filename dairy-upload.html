@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日记上传</title>
+    <style>
+        .drop_area,
+        .drop_area2{
+            width:500px;
+            height:300px;
+            border:1px dotted lightgray;
+        }
+        .update-jumbotron,
+        .update-jumbotron2{
+            width:500px;
+            height:300px;
+            float:left;
+            margin-bottom:50px;
+        }
+
+        .btn-upload{
+            display:block;
+            clear:both;
+            width:80px;
+            height:30px;
+            background:rgba(65,94,153,0.2);
+            text-align:center;
+            font-size:16px;
+            color:rgba(65,94,153,1);
+            text-decoration:none;
+        }
+        input{
+            width:500px;
+            height:300px;
+            text-align:center;
+            font-size:50px;
+        }
+
+        #doctors,#items{
+            clear:both;
+            width:500px;
+            height:200px;
+
+        }
+        select{
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!--<form action="data/diary/dairy-InfoModify.php" method="post" enctype="multipart/form-data">-->
+            <!--<label for="file">文件名</label>-->
+            <!--<input type="file" name="mypic" id="file"/> <br/>-->
+            <!--<input type="submit" value="上传"/>-->
+        <!--</form>-->
+
+        <div id="tbody1">
+            <div class="update-jumbotron">
+                <div class="drop_area preview">
+                    <input type="text" placeholder="新氧前">
+                </div>
+            </div>
+            <div class="update-jumbotron2">
+                <div class="drop_area2 preview2">
+                    <input type="text" placeholder="新氧后">
+                </div>
+            </div>
+            <a href="" class="btn-upload">上传图片</a>
+        </div>
+
+        <div id="doctors">
+            <span>选择医生</span>
+            <select >
+                <option value ="1">Volvo</option>
+                <option value ="2">Saab</option>
+                <option value="3">Opel</option>
+                <option value="4">Audi</option>
+            </select>
+        </div>
+        <div id="items">
+            <span>选择项目</span>
+            <select >
+                <option value ="1">Volvo</option>
+                <option value ="2">Saab</option>
+                <option value="3">Opel</option>
+                <option value="4">Audi</option>
+            </select>
+        </div>
+
+
+    </div>
+
+    <script src="JS/jquery-3.2.1.js"></script>
+    <script src="JS/dairy-main.js"></script>
+</body>
+</html>
