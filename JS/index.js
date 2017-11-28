@@ -274,12 +274,11 @@ $(()=>{
         });
     var WIDTH=1088,HEIGHT=370,CX=WIDTH/2,CY=HEIGHT/2,
         BSWIDTH=20,BSCOLOR="black",BS_X_OFFSET=20,BS_Y_OFFSET=10;
-    var $container=$("#container");
-    $container.mousemove(e=>{
-        var offsetX=e.clientX-$container.offset().left,
-            offsetY=e.clientY-($container.offset().top-$("body,html").scrollTop());
-        var rateY=(CY-offsetY)/CY,
-            rateX=(offsetX-CX)/CX;
+    var $container=$("#container"),
+        $superMask=$("#superMask");
+    $superMask.mousemove(e=>{
+        var rateY=(CY-e.offsetY)/CY,
+            rateX=(e.offsetX-CX)/CX;
         var x_deg=5*rateY;
         var y_deg=5*rateX;
 

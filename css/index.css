@@ -520,6 +520,7 @@ a.content:hover{
 	position:absolute;
 	transition: all 1.5s linear;
 	perspective:2000px;
+	border-radius:20px;
 }
 #floor3 .device.fade{
 	opacity:0;
@@ -660,12 +661,13 @@ div.infomiddle p{
 	/*50%{transform:translateY(43px) scaleY(.2)}*/
 	/*100%{transform:translateY(43px) scaleY(.1)}*/
 /*}*/
-#container{
+#container,#superMask{
 	width:1088px; height:370px;
 	transform:rotatex(0deg) rotatey(0deg);
-	transition:all .5s linear;
+	transition:all .2s linear;
 	border-radius:20px;
 }
+#superMask{position:absolute;top:0;left:0}
 .doc-left-body>li{
 	perspective:1000px;/*视距*/
 	transform-style:preserve-3d;/*让父元素变为3d效果的容器*/
