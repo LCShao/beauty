@@ -45,7 +45,7 @@ $(function(){
 
       $.ajax({
         type:"post",
-        url:"data/diary/dairy-upload.php",
+        url:"data/diary/upload.php",
         data:fd,
         contentType:false,
         processData: false,
@@ -69,7 +69,7 @@ $(function(){
 //加载项目
   $.ajax({
     type:"GET",
-    url:"data/diary/dairy-skills.php",
+    url:"data/diary/skills.php",
     success:function(data){
       let html="";
       html+=`<option>--请选择--</option>`;
@@ -83,12 +83,12 @@ $(function(){
 //为上传头像按钮绑定点击事件
   $(".btn-save").click(function(e){
     e.preventDefault();
-    $.post("data/diary/dairy-update.php",$("form").serialize())
+    $.post("data/diary/update.php",$("form").serialize())
   });
 
   if(location.search!==""){
     var dairy_id=location.search.split("=")[1];
-    $.get("data/diary/dairy-getDairyById.php","dairy_id="+dairy_id)
+    $.get("data/diary/getDiaryById.php","dairy_id="+dairy_id)
       .then(data=>{
         $("form .drop_area").append(`<img src="${data.before_pic}" />`)
           .next().val(data.before_pic);
