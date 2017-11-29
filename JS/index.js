@@ -1,9 +1,7 @@
-//加载头部和尾部
 $(()=>{
-    $("#header").load("indexHead.html");
-    $("#footer").load("indexFooter.html");
-})
-
+  $("#header").load("indexHead.html");
+  $("#footer").load("indexFooter.html");
+});
 //加载广告轮播
 $(()=>{
     $.get("data/index/banner.php")

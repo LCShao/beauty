@@ -11,6 +11,8 @@ $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_row($result);
 
 if($row!=null){
+  session_start();
+  $_SESSION["uid"]=$row[0];
 	echo '{"code":1,"msg":"欢迎登录"}';
 	exit;
 }else{

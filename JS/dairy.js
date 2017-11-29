@@ -1,7 +1,3 @@
-//按项目查看
-//加载尾部
-$("#footer").load("indexFooter.html");
-
 //加载条目和分页
 $(function(){
     function loadProductByPage(pno){
