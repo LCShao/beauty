@@ -6,16 +6,10 @@ $(function(){
         $.ajax({
             type:"POST",
             url:"data/index/login.php",
-            data:{uname:u,upwd:p},
-            success:function(data){
-                console.log(data);
-                if(data.code>0){
-                    alert(data.msg);
-                    location.href = "index.html";
-                }else{
-                    alert(data.msg);
-                }
-            }
+            data:{uname:u,upwd:p}
+        }).then(data=>{
+          if(data.ok=="0") alert(data.msg);
+          else location="index.html";
         })
     });
 

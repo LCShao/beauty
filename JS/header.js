@@ -2,4 +2,11 @@
 $(()=>{
   $("#header").load("diary_head.html");
   $("#footer").load("indexFooter.html");
+  $.get("data/index/isLogin").then(data=>{
+    if(data.ok==1){
+      $("#login").hide().next().show().children().first().html(data.uname);
+    }else{
+      $("#login").show().next().hide();
+    }
+  })
 });

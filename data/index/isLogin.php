@@ -8,4 +8,5 @@ if($uid!=null){
   $result=mysqli_query($conn,$sql);
   $uname=mysqli_fetch_row($result)[0];
   echo json_encode(["ok"=>1,"uname"=>$uname]);
-}
+}else
+  echo json_encode(["ok"=>0]);

@@ -13,8 +13,8 @@ $row=mysqli_fetch_row($result);
 if($row!=null){
   session_start();
   $_SESSION["uid"]=$row[0];
-	echo '{"code":1,"msg":"欢迎登录"}';
+	echo '{"code":1}';
 	exit;
 }else{
-	echo '{"code":-2,"msg":"用户名密码错误"}';
+	echo '{"code":0,"msg":"用户名密码错误"}';
 };
