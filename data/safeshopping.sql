@@ -1,4 +1,4 @@
-USE beauty;
+drop table if exists safeshopping;
 CREATE TABLE `safeshopping` (
   `sid` int(11) NOT NULL,
   `img` varchar(128) NOT NULL,
@@ -22,7 +22,7 @@ INSERT INTO `safeshopping` (`sid`, `img`, `title`, `details`) VALUES
 --
 -- 表的结构 `safeshoppingsecond`
 --
-
+drop table if exists safeshoppingsecond;
 CREATE TABLE `safeshoppingsecond` (
   `img` varchar(128) DEFAULT NULL,
   `title` varchar(128) DEFAULT NULL,
@@ -42,4 +42,3 @@ INSERT INTO `safeshoppingsecond` (`img`, `title`, `details`) VALUES
 ('img/safeShopping/20170420160359622.png', '瘦才是王道', '快速瘦身'),
 ('img/safeShopping/20170420160424753.png', '初恋少女馆', '脂肪填充'),
 ('img/safeShopping/20170515142622230.png', '换季护肤馆', '皮肤管理');
-
