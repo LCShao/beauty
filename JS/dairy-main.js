@@ -7,7 +7,7 @@ $(()=>{
               for(var d of data){
                   html+=`<div class="i masonry-block">
                   <span class="span1">${d.days}</span>`;
-                  if(d.isAuthor==1)   html+= '<span class="span2" data-id="${d.dairy_id}"><b>×</b></span><span class="span3" data-id="${d.dairy_id}">编辑</span>'
+                  if(d.isAuthor==1)   html+=`<span class="span2" data-id="${d.dairy_id}"><b>×</b></span><span class="span3" data-id="${d.dairy_id}">编辑</span>`
                   html+=`<img src="${d.after_pic}" class="img1"/>
                   <img src="${d.before_pic}" />
                   <ul>

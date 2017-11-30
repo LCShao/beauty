@@ -115,19 +115,29 @@
 		background-position:0px 131px;
 	}
 /*隐藏的文字	*/
-#desc{
-		width:400px;
-		height:390px;
-		margin-left:205px;
-		background:#fff;
+#descs,.desc{
+		width:400px; height:390px;
 		position:absolute;
 		top:0px;
-		left:140px;
-		z-index:10;
-		display:none;
-		opacity:0.8;
-	}
-#desc a{display:inline-block; padding:20px 10px;}
+}
+#descs{
+  margin-left:205px;
+  background:#fff;
+  left:140px;
+  opacity:0.8;
+  z-index:10;
+}
+.desc{
+  display:none;
+  left:50px;
+  transiton:all .5s linear;
+}
+.desc.show{
+  left:0px;
+  display:block;
+  z-index:100;
+}
+.desc a{display:inline-block; padding:20px 10px;}
 .title{
 		margin:20px 0 10px 20px;
 

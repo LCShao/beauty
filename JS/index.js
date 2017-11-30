@@ -85,18 +85,34 @@ $(()=>{
 });
 $(()=>{
     $("#sidebar").hover(
-        e=>$("#desc").show(),
-        e=>$("#desc").hide()
+        e=>$("#descs").show(),
+        e=>$("#descs").hide()
     )});
 //导航详细页
 $(()=>{
   $.get("data/index/getAllSkills.php").then(data=>{
-    var html="";
+    var htmlUl="",htmlDesc="";
+    console.log(data);
     for(var name of data){
-      html+=`<li><a href="#"><i></i><span>${name.skill_name}</span></a></li>`;
+      htmlUl+=`<li><a href="#"><i></i><span>${name.skill_name}</span></a></li>`;
+      var arr=name.skill_subs.split(";");
+      //`<h3>title</h3><hr><p><a>content</a><a>content</a><p>`
+      for(var i=0;i<arr.length;i++){
+        var arr1=arr[i].split(":");
+        htmlDesc+=`<div class="desc">`;
+        htmlDesc+=`<h4>${arr1[0]}</h4><hr><p>`;
+        console.log(arr1);
+        var subs=arr1[1].split(",");
+        for(var j=0;j<subs.length;j++) {
+          htmlDesc += `<a href="#">${subs[j]}</a>`;
+        }
+        htmlDesc+=`</p></div>`;
+      }
     }
+    $("#descs").html=htmlDesc;
     //$title为所有的span的内容 需要获得当前的span的text然后拼url 添加mouseenter 和mouseout
-    $("#sidebar>ul").html(html)
+    console.log(htmlUl);
+    $("#sidebar>ul").html(htmlUl)
       .on("mouseenter","span",function(){
         skill_name=$(this).text();
         var url="data/index/details.php?skill_name="+skill_name;
@@ -113,7 +129,7 @@ $(()=>{
             }
             html+=`</p>`;
           }
-          $("#desc").html(html);
+          $(".desc").html(html);
         })
     });
   })

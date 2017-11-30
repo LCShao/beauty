@@ -9,7 +9,9 @@ $(function(){
             data:{uname:u,upwd:p}
         }).then(data=>{
           if(data.ok=="0") alert(data.msg);
-          else location="index.html";
+          else{
+              location=location.search.slice(6);
+          }
         })
     });
 

@@ -55,7 +55,7 @@ $(function(){
 //加载医生
   $.ajax({
     type:"GET",
-    url:"data/diary/diary-doctors.php",
+    url:"data/doctor/diary-doctors.php",
     success:function(data){
       let html="";
       html+=`<option>--请选择--</option>`;
@@ -69,7 +69,7 @@ $(function(){
 //加载项目
   $.ajax({
     type:"GET",
-    url:"data/diary/skills.php",
+    url:"data/skills/skills.php",
     success:function(data){
       let html="";
       html+=`<option>--请选择--</option>`;
