@@ -57,6 +57,7 @@
 #sidebar>ul{  background:#fff;
 		width:200px;
 		height:380px;
+  position:relative;
 	}
 #sidebar>ul>li{
 		height:38px;
@@ -80,7 +81,7 @@
 	color:#333;
 	float:left;
 }
-#sidebar ul li:hover{
+#sidebar ul li:hover,#sidebar ul li.hover{
 		padding-left:10px;
 		width:190px;
 	}
@@ -115,29 +116,26 @@
 		background-position:0px 131px;
 	}
 /*隐藏的文字	*/
-#descs,.desc{
-		width:400px; height:390px;
-		position:absolute;
-		top:0px;
-}
-#descs{
-  margin-left:205px;
-  background:#fff;
-  left:140px;
-  opacity:0.8;
+#sidebar ul li>.desc{
+	width:400px; height:390px;
+	position:absolute;
+	top:0px;
+	background:#fff;
+	left:250px;
+  opacity:0;
   z-index:10;
+  transition:all .5s linear;
 }
-.desc{
-  display:none;
-  left:50px;
-  transiton:all .5s linear;
-}
-.desc.show{
-  left:0px;
-  display:block;
+#sidebar ul li.hover>.desc {
+  left:200px;
+  opacity:1;
   z-index:100;
 }
-.desc a{display:inline-block; padding:20px 10px;}
+#sidebar ul li>.desc a{
+  display:inline-block;
+  padding:20px 10px;
+  color:gray;
+}
 .title{
 		margin:20px 0 10px 20px;
 

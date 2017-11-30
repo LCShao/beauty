@@ -83,54 +83,31 @@ $(()=>{
                 })
         })
 });
-$(()=>{
-    $("#sidebar").hover(
-        e=>$("#descs").show(),
-        e=>$("#descs").hide()
-    )});
 //导航详细页
 $(()=>{
   $.get("data/index/getAllSkills.php").then(data=>{
-    var htmlUl="",htmlDesc="";
-    console.log(data);
+    var html="";
     for(var name of data){
-      htmlUl+=`<li><a href="#"><i></i><span>${name.skill_name}</span></a></li>`;
+      html+=`<li><a href="#"><i></i><span>${name.skill_name}</span></a>`;
+      html+=`<div class="desc">`;
       var arr=name.skill_subs.split(";");
       //`<h3>title</h3><hr><p><a>content</a><a>content</a><p>`
       for(var i=0;i<arr.length;i++){
         var arr1=arr[i].split(":");
-        htmlDesc+=`<div class="desc">`;
-        htmlDesc+=`<h4>${arr1[0]}</h4><hr><p>`;
-        console.log(arr1);
+        html+=`<h4>${arr1[0]}</h4><hr><p>`;
         var subs=arr1[1].split(",");
         for(var j=0;j<subs.length;j++) {
-          htmlDesc += `<a href="#">${subs[j]}</a>`;
+          html += `<a href="#">${subs[j]}</a>`;
         }
-        htmlDesc+=`</p></div>`;
+        html+=`</p>`;
       }
+      html+=`</div></li>`;
     }
-    $("#descs").html=htmlDesc;
     //$title为所有的span的内容 需要获得当前的span的text然后拼url 添加mouseenter 和mouseout
-    console.log(htmlUl);
-    $("#sidebar>ul").html(htmlUl)
-      .on("mouseenter","span",function(){
-        skill_name=$(this).text();
-        var url="data/index/details.php?skill_name="+skill_name;
-        $.get(url).then(data=>{
-          var html="";
-          var arr=data[0].skill_subs.split(";");
-          //`<h3>title</h3><hr><p><a>content</a><a>content</a><p>`
-          for(var i=0;i<arr.length;i++){
-            var arr1=arr[i].split(":");
-            html+=`<h4>${arr1[0]}</h4><hr><p>`;
-            var subs=arr1[1].split(",");
-            for(var j=0;j<subs.length;j++) {
-              html += `<a href="#">${subs[j]}</a>`;
-            }
-            html+=`</p>`;
-          }
-          $(".desc").html(html);
-        })
+    $("#sidebar>ul").html(html).on("mouseenter","li",function(){
+      $(this).addClass("hover");
+    }).on("mouseleave","li",function(){
+      $(this).removeClass("hover");
     });
   })
 });
