@@ -29,7 +29,7 @@ $output = [
    "pageSize"=>$pageSize,   //???
    "pageCount"=>$pageCount, //???
    "pno"=>$pno,             //????
-   "data"=>$rows            //?????
+   "data"=>$rows          //?????
  ];
 
  //11:??

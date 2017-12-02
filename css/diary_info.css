@@ -1,13 +1,11 @@
 .masonry-block{
     width:240px;
+    margin-bottom:10px;
 }
 .masonry-block>ul{
     display:inline-block;
 }
-.grid{
-    width:990px;
-    margin:0 auto;
-}
+.grid{  width:990px;  margin:0 auto;  }
 .i{
     padding:10px;
     border:1px solid transparent;
@@ -16,10 +14,7 @@
     width: 240px;
     margin-bottom: 12px;
 }
-.img1{
-    width:100%;
-    border-radius:10px 10px 0 0;
-}
+.img1{  width:100%;  border-radius:10px 10px 0 0;  }
 .span1{
     display: inline-block;
     position: absolute;
@@ -94,4 +89,4 @@ div.i>ul li span.star-f{
 div.i img{
     width:100%;
 }
-
+#loading{text-align:center;}

@@ -152,10 +152,10 @@ CREATE TABLE `dairy_info` (
 --
 
 INSERT INTO `dairy_info` (`dairy_id`, `days`, `after_pic`, `before_pic`, `detail_id`, `doctor_id`, `uid`) VALUES
-(1, 73, 'img/picture2/20171017133207891_240_320.jpg', 'img/picture2/20171009182133801_240_360.jpg', '2', '1', '3'),
+(1, 73, 'img/picture2/20171017133207891_240_320.jpg', 'img/picture2/20171009182133801_240_360.jpg', '2', '1', '1'),
 (2, 62, 'img/picture2/20171031163648597_240_324.jpg', 'img/picture2/20170820235200881_240_160.jpg', '3', '3', '1'),
 (3, 56, 'img/picture2/20171101141348161_240_427.jpg', 'img/picture2/20170906171720619_240_208.jpg', '1', '2', '4'),
-(4, 57, 'img/picture2/20171104171401934_240_240.jpg', 'img/picture2/20170904101221557_240_160.jpg', '1', '2', '2'),
+(4, 57, 'img/picture2/20171104171401934_240_240.jpg', 'img/picture2/20170904101221557_240_160.jpg', '1', '2', '1'),
 (5, 63, 'img/picture2/20171014165317746_240_320.jpg', 'img/picture2/20170906171720619_240_208.jpg', '6', '1', '1'),
 (6, 91, 'img/picture2/20171106101251142_240_320.jpg', 'img/picture2/20170913162155156_240_180.jpg', '7', '2', '2'),
 (7, 104, 'img/picture2/20170906185008302_240_320.jpg', 'img/picture2/20170525150912973_240_320.jpg', '10', '5', '4'),
@@ -171,7 +171,27 @@ INSERT INTO `dairy_info` (`dairy_id`, `days`, `after_pic`, `before_pic`, `detail
 (17, 75, 'img/picture2/20171031163648597_240_324.jpg', 'img/picture2/20170820235200881_240_160.jpg', '9', '3', '2'),
 (18, 110, 'img/picture2/20171106101251142_240_320.jpg', 'img/picture2/20170913162155156_240_180.jpg', '3', '4', '1'),
 (19, 153, 'img/picture2/20170906185008302_240_320.jpg', 'img/picture2/20170525150912973_240_320.jpg', '3', '4', '4'),
-(20, 43, 'img/picture2/20171005112644244_240_138.png', 'img/picture2/20170825151308254_240_270.jpg', '4', '9', '3');
+(20, 43, 'img/picture2/20171005112644244_240_138.png', 'img/picture2/20170825151308254_240_270.jpg', '4', '9', '3'),
+(21, 73, 'img/picture2/20171017133207891_240_320.jpg', 'img/picture2/20171009182133801_240_360.jpg', '2', '1', '3'),
+(22, 62, 'img/picture2/20171031163648597_240_324.jpg', 'img/picture2/20170820235200881_240_160.jpg', '3', '3', '1'),
+(23, 56, 'img/picture2/20171101141348161_240_427.jpg', 'img/picture2/20170906171720619_240_208.jpg', '1', '2', '4'),
+(24, 57, 'img/picture2/20171104171401934_240_240.jpg', 'img/picture2/20170904101221557_240_160.jpg', '1', '2', '2'),
+(25, 63, 'img/picture2/20171014165317746_240_320.jpg', 'img/picture2/20170906171720619_240_208.jpg', '6', '1', '1'),
+(26, 91, 'img/picture2/20171106101251142_240_320.jpg', 'img/picture2/20170913162155156_240_180.jpg', '7', '2', '2'),
+(27, 104, 'img/picture2/20170906185008302_240_320.jpg', 'img/picture2/20170525150912973_240_320.jpg', '10', '5', '4'),
+(28, 66, 'img/picture2/20171104095548120_240_320.jpg', 'img/picture2/20170905110651992_240_320.jpg', '1', '6', '3'),
+(29, 73, 'img/picture2/20171104102339840_240_427.jpg', 'img/picture2/20170823102214215_240_160.jpg', '11', '4', '2'),
+(30, 309, 'img/picture2/20171005112644244_240_138.png', 'img/picture2/20170825151308254_240_270.jpg', '8', '1', '4'),
+(31, 70, 'img/picture2/20171101141348161_240_427.jpg', 'img/picture2/20170904101221557_240_160.jpg', '3', '1', '3'),
+(32, 140, 'img/picture2/20171017133207891_240_320.jpg', 'img/picture2/20171009182133801_240_360.jpg', '8', '7', '1'),
+(33, 160, 'img/picture2/20171104171401934_240_240.jpg', 'img/picture2/20170904101221557_240_160.jpg', '4', '8', '2'),
+(34, 43, 'img/picture2/20171104102339840_240_427.jpg', 'img/picture2/20170823102214215_240_160.jpg', '3', '2', '3'),
+(35, 268, 'img/picture2/20171031163648597_240_324.jpg', 'img/picture2/20170820235200881_240_160.jpg', '1', '2', '1'),
+(36, 16, 'img/picture2/20171017133207891_240_320.jpg', 'img/picture2/20171009182133801_240_360.jpg', '5', '9', '4'),
+(37, 75, 'img/picture2/20171031163648597_240_324.jpg', 'img/picture2/20170820235200881_240_160.jpg', '9', '3', '2'),
+(38, 110, 'img/picture2/20171106101251142_240_320.jpg', 'img/picture2/20170913162155156_240_180.jpg', '3', '4', '1'),
+(39, 153, 'img/picture2/20170906185008302_240_320.jpg', 'img/picture2/20170525150912973_240_320.jpg', '3', '4', '4'),
+(40, 43, 'img/picture2/20171005112644244_240_138.png', 'img/picture2/20170825151308254_240_270.jpg', '4', '9', '3');
 
 -- --------------------------------------------------------
 
@@ -719,192 +739,67 @@ CREATE TABLE doctor_skill_rel(
   doctor_id INT,  #医生编号
   skill_id INT    #技能编号
 );
-insert into doctor_skill_rel (doctor_id,skill_id) values (1,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (1,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (1,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (2,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (2,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (2,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (3,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (3,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (3,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (4,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (4,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (4,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (5,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (5,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (5,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (6,11);
-insert into doctor_skill_rel (doctor_id,skill_id) values (6,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (6,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (7,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (7,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (7,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (8,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (8,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (8,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (9,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (9,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (9,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (10,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (10,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (10,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (11,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (11,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (11,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (12,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (12,11);
-insert into doctor_skill_rel (doctor_id,skill_id) values (12,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (13,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (13,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (13,8);
-insert into doctor_skill_rel (doctor_id,skill_id) values (14,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (14,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (14,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (15,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (15,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (15,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (16,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (16,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (16,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (17,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (17,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (17,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (18,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (18,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (18,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (19,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (19,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (19,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (20,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (20,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (20,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (21,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (21,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (21,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (22,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (22,8);
-insert into doctor_skill_rel (doctor_id,skill_id) values (22,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (23,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (23,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (23,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (24,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (24,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (24,11);
-insert into doctor_skill_rel (doctor_id,skill_id) values (25,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (25,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (25,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (26,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (26,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (26,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (27,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (27,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (27,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (28,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (28,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (28,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (29,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (29,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (29,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (30,11);
-insert into doctor_skill_rel (doctor_id,skill_id) values (30,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (30,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (31,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (31,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (31,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (32,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (32,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (32,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (33,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (33,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (33,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (34,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (34,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (34,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (35,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (35,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (35,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (36,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (36,8);
-insert into doctor_skill_rel (doctor_id,skill_id) values (36,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (37,11);
-insert into doctor_skill_rel (doctor_id,skill_id) values (37,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (37,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (38,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (38,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (38,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (39,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (39,11);
-insert into doctor_skill_rel (doctor_id,skill_id) values (39,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (40,8);
-insert into doctor_skill_rel (doctor_id,skill_id) values (40,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (40,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (41,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (41,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (41,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (42,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (42,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (42,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (43,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (43,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (43,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (44,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (44,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (44,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (45,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (45,8);
-insert into doctor_skill_rel (doctor_id,skill_id) values (45,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (46,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (46,11);
-insert into doctor_skill_rel (doctor_id,skill_id) values (46,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (47,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (47,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (47,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (48,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (48,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (48,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (49,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (49,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (49,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (50,8);
-insert into doctor_skill_rel (doctor_id,skill_id) values (50,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (50,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (51,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (51,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (51,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (52,9);
-insert into doctor_skill_rel (doctor_id,skill_id) values (52,5);
-insert into doctor_skill_rel (doctor_id,skill_id) values (52,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (53,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (53,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (53,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (54,8);
-insert into doctor_skill_rel (doctor_id,skill_id) values (54,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (54,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (55,6);
-insert into doctor_skill_rel (doctor_id,skill_id) values (55,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (55,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (56,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (56,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (56,16);
-insert into doctor_skill_rel (doctor_id,skill_id) values (57,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (57,7);
-insert into doctor_skill_rel (doctor_id,skill_id) values (57,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (58,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (58,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (58,17);
-insert into doctor_skill_rel (doctor_id,skill_id) values (59,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (59,10);
-insert into doctor_skill_rel (doctor_id,skill_id) values (59,3);
-insert into doctor_skill_rel (doctor_id,skill_id) values (60,15);
-insert into doctor_skill_rel (doctor_id,skill_id) values (60,12);
-insert into doctor_skill_rel (doctor_id,skill_id) values (60,2);
-insert into doctor_skill_rel (doctor_id,skill_id) values (61,4);
-insert into doctor_skill_rel (doctor_id,skill_id) values (61,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (61,13);
-insert into doctor_skill_rel (doctor_id,skill_id) values (62,14);
-insert into doctor_skill_rel (doctor_id,skill_id) values (62,1);
-insert into doctor_skill_rel (doctor_id,skill_id) values (62,13);
+insert into doctor_skill_rel (doctor_id,skill_id) values
+(1,5),
+(1,16),
+(1,2),
+(2,14),
+(2,1),
+(2,12),
+(3,1),
+(3,4),
+(3,6),
+(4,9),
+(4,10),
+(4,17),
+(5,12),
+(5,4),
+(5,6),
+(6,11),
+(6,16),
+(6,17),
+(7,2),
+(7,9),
+(7,6),
+(8,9),
+(8,12),
+(8,5),
+(9,9),
+(9,10),
+(9,7),
+(10,16),
+(10,7),
+(10,15),
+(11,5),
+(11,10),
+(11,6),
+(12,7),
+(12,11),
+(12,13),
+(13,7),
+(13,13),
+(13,8),
+(14,5),
+(14,13),
+(14,14),
+(15,16),
+(15,3),
+(15,9),
+(16,7),
+(16,4),
+(16,14),
+(17,9),
+(17,6),
+(17,10),
+(18,7),
+(18,6),
+(18,1),
+(19,12),
+(19,14),
+(19,15),
+(20,15),
+(20,9),
+(20,17),(21,9),(21,12),(21,2),(22,7),(22,8),(22,1),(23,14),(23,4),(23,12),(24,17),(24,16),(24,11),(25,7),(25,13),(25,15),(26,4),(26,2),(26,9),(27,4),(27,12),(27,14),(28,17),(28,7),(28,10),(29,16),(29,7),(29,2),(30,11),(30,12),(30,17),(31,3),(31,15),(31,7),(32,16),(32,6),(32,14),(33,10),(33,13),(33,12),(34,3),(34,16),(34,15),(35,10),(35,7),(35,17),(36,1),(36,8),(36,4),(37,11),(37,1),(37,4),(38,4),(38,3),(38,12),(39,4),(39,11),(39,2),(40,8),(40,3),(40,12),(41,12),(41,2),(41,17),(42,1),(42,10),(42,14),(43,15),(43,16),(43,17),(44,12),(44,16),(44,15),(45,5),(45,8),(45,7),(46,7),(46,11),(46,12),(47,17),(47,9),(47,5),(48,5),(48,6),(48,14),(49,14),(49,6),(49,2),(50,8),(50,12),(50,7),(51,4),(51,2),(51,14),(52,9),(52,5),(52,3),(53,6),(53,17),(53,13),(54,8),(54,3),(54,4),(55,6),(55,3),(55,13),(56,3),(56,13),(56,16),(57,15),(57,7),(57,12),(58,4),(58,10),(58,17),(59,12),(59,10),(59,3),(60,15),(60,12),(60,2),(61,4),(61,1),(61,13),(62,14),(62,1),(62,13);
 
 drop table if exists safeshopping;
 CREATE TABLE `safeshopping` (

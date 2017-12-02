@@ -1,12 +1,8 @@
-//按医生查看
-//加载尾部
-$("#footer").load("indexFooter.html");
-
 //加载条目和分页
 $(()=> {
   function loadProductByPage(pno) {
-    var $ul=$(this);
-    var countrys=["大陆"],titles=[],qualifys=[],years=[],edu_levels=[];
+    var $ul=$(".optul");
+    var countrys=[],titles=[],qualifys=[],years=[],edu_levels=[];
     var $as=$ul.find("span:contains(所在国家)+p>a.on");
     $as.each((i,elem)=>{
       countrys.push(elem.innerHTML);
@@ -55,7 +51,6 @@ $(()=> {
     }
     $.get("data/doctor/queryDoctor.php",search).then(output => {
       let data = output.data;
-      console.log(data);
       let fhtml = "";
       for (let d of data) {
         fhtml += `<li class="docDel">
@@ -119,9 +114,8 @@ $(()=> {
         }
       }
     }
-    e.preventDefault();
-
 
     loadProductByPage(1);
+    e.preventDefault();
   })
 });
