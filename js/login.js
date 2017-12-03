@@ -10,7 +10,10 @@ $(function(){
         }).then(data=>{
           if(data.ok=="0") alert(data.msg);
           else{
+            if(location.search!="")
               location=location.search.slice(6);
+            else
+              location="index.html";
           }
         })
     });

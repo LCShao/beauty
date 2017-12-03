@@ -1,9 +1,6 @@
 //加载头部和尾部
 $(()=>{
-  $("#header").load("diary_head.html",()=>{
-    $("#login>:first-child").click(()=>{
-      location="login.html?back="+location.pathname
-    });
+  function isLogin(){
     $.get("data/index/isLogin.php").then(data=>{
       if(data.ok==1){
         $("#login").hide().next().show().children().first().html(data.uname);
@@ -11,6 +8,19 @@ $(()=>{
         $("#login").show().next().hide();
       }
     });
+  }
+  $("#header").load("diary_head.html",()=>{
+    isLogin();
+    $("#login>:first-child").click(e=>{
+      e.preventDefault();
+      location="login.html?back="+location.pathname
+    });
+    $("#welcome>:last-child").click(e=>{
+      e.preventDefault();
+      $.get("data/index/logout.php").then(()=>{
+        location.reload(true);
+      });
+    })
   });
   $("#footer").load("indexFooter.html");
 });
