@@ -45,16 +45,19 @@ $(()=>{
         $("#container").append($html)
           .masonry("appended", $html);
         $("#loading").hide();
+        timer=null;
       });
   }
   append();
-  $(window).scroll(()=>{
+  var timer=null;
+  $(window).off().scroll(()=>{
     var scrollTop=$("html,body").scrollTop();
     var offsetTop=$("#footer").offset().top;
     if(offsetTop<=scrollTop+innerHeight){
       $("#loading").show();
       pno++;
-      setTimeout(append,1000);
+      clearTimeout(timer);
+      timer=setTimeout(append,1000);
     }
   })
 })
