@@ -10928,7 +10928,7 @@ var LocationIndex = _location.LocationIndex;
     addLinter("E007", function lintBootstrapJs($, reporter) {
         var scripts = bootstrapScriptsIn($);
         if (scripts.longhands.length && scripts.minifieds.length) {
-            reporter("Only one copy of Bootstrap's JS should be included; currently the webpage includes both bootstrap.js and bootstrap.min.js", scripts.longhands.add(scripts.minifieds));
+            reporter("Only one copy of Bootstrap's js should be included; currently the webpage includes both bootstrap.js and bootstrap.min.js", scripts.longhands.add(scripts.minifieds));
         }
     });
     addLinter("W006", function lintTooltipsOnDisabledElems($, reporter) {
