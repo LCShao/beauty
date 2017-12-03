@@ -19,7 +19,7 @@ $(function(){
 
     });
 
-    $.get("data/safeShopping/safeShopping.php")
+    $.get("data/safe-shopping/safe-shopping.php")
         .then(data=>{
             console.log(data);
             let html="";
