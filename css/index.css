@@ -117,19 +117,19 @@
 	}
 /*隐藏的文字	*/
 #sidebar ul li>.desc{
-	width:400px; height:390px;
+	height:390px;
 	position:absolute;
 	top:0px;
 	background:#fff;
-	left:250px;
+	left:160px;
   opacity:0;
-  z-index:10;
-  transition:all .5s linear;
+  width:0; overflow:hidden;
+  transition:left .5s linear;
 }
 #sidebar ul li.hover>.desc {
-  left:200px;
+  left:180px;
+  width:400px;
   opacity:1;
-  z-index:100;
 }
 #sidebar ul li>.desc a{
   display:inline-block;
