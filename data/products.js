@@ -103,6 +103,6 @@ var imgs=[
   "20170925230048156_400.jpg"
 ];
 for(var i=0,strs=[];i<arrs.length;i++){
-  strs[i]=`('${imgs[i]}','${arrs[i][0]}','${arrs[i][1]}',${parseInt(Math.random()*62+1)},'${arrs[i][2]}','${arrs[i][3]}','${arrs[i][4]}','${arrs[i][5]}','${arrs[i][6]}',${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0})`
+  strs[i]=`('${"img/safe-shopping/"+imgs[i]}','${arrs[i][0]}','${arrs[i][1]}',${parseInt(Math.random()*62+1)},'${arrs[i][2]}','${arrs[i][3]}','${arrs[i][4]}','${arrs[i][5]}','${arrs[i][6]}',${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0})`
 }
 console.log(strs.join(","));

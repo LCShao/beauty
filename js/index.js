@@ -8,7 +8,7 @@ $(()=>{
       }
     });
   }
-  $("#header").load("indexHead.html",()=>{
+  $("#header").load("index-head.html",()=>{
     isLogin();
     $("#login>:first-child").click(()=>{
       location="login.html?back="+location.pathname
@@ -20,7 +20,7 @@ $(()=>{
       });
     })
   });
-  $("#footer").load("indexFooter.html");
+  $("#footer").load("index-footer.html");
 });
 //加载广告轮播
 $(()=>{

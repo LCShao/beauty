@@ -22,5 +22,5 @@ $(()=>{
       });
     })
   });
-  $("#footer").load("indexFooter.html");
+  $("#footer").load("index-footer.html");
 });
