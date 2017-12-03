@@ -21,7 +21,7 @@ $(function(){
 
     $.get("data/safeShopping/safeShopping.php")
         .then(data=>{
-            // console.log(data[0].img);
+            console.log(data);
             let html="";
             if(data.length>0){
                 for(let i of data){

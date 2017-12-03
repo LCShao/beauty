@@ -3,6 +3,13 @@ $db_host = '127.0.0.1';
 $db_user = 'root';
 $db_password = '';
 $db_database = 'beauty';
+/*
+$db_host = 'r.rdc.sae.sina.com.cn';
+$db_user = 'ljjy2o2xn4';
+$db_password = 'wl40j513kw40z1z0xiw1455h4mi05ll3x1k2kjwj';
+$db_database = 'app_lcshao';
+*/
+
 $db_port = 3306;
 $db_charset = 'UTF8';
 
