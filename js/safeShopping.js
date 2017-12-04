@@ -39,7 +39,7 @@ $(function(){
             $("#case-box").html(html);
         })
 
-    $.get("data/safeShopping/safeShoppingSecond.php")
+    $.get("data/safe-shopping/safeShoppingSecond.php")
         .then(data=>{
             // console.log(data[0].img);
             let html="";
