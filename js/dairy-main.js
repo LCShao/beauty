@@ -43,7 +43,8 @@ $(()=>{
               `dairy-upload.html?iid=${e.target.dataset.id}`;
           });
         $("#container").append($html)
-          .masonry("appended", $html);
+          .masonry("appended", $html)
+          .masonry();
         $("#loading").hide();
         timer=null;
       });
