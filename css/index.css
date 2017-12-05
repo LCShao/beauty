@@ -58,16 +58,19 @@
 #sidebar>ul{  background:#fff;
 		width:200px;
 		height:380px;
-  position:relative;
-	}
+    position:relative;
+}
 #sidebar>ul>li{
-		height:38px;
-		line-height:38px;
-		width:200px;
-		font-size:16px;
-		transition:all 0.3s linear;
-		background:white;
-	}
+  height:38px;
+  line-height:38px;
+  width:200px;
+  font-size:16px;
+  background:white;
+  transition:all 0.3s linear;
+}
+#sidebar>ul>li>a{
+  z-index:10;
+}
 #sidebar>ul>li>a>i{
 		display:block;
 		float:left;
@@ -118,6 +121,9 @@
 	}
 /*隐藏的文字	*/
 #sidebar ul li>.desc{
+  text-align:left;
+  padding:0px;
+  z-index:0;
 	height:390px;
 	position:absolute;
 	top:0px;
@@ -129,30 +135,29 @@
              left .5s linear;
 }
 #sidebar ul li.hover>.desc {
+  text-align:left;
   left:180px;
+  padding:10px;
   width:400px;
   opacity:1;
 }
 #sidebar ul li>.desc a{
   display:inline-block;
-  padding:20px 10px;
   color:gray;
 }
-.title{
-		margin:20px 0 10px 20px;
-
-	}
-.content{
-		display:inline-block;
-		margin:0 10px;
-		height:20px;
-		font-size:15px;
-		text-align:center;
-		line-height:20px;
-	}
-a.content:hover{
-		color:#70B1E2;
-	}
+#sidebar ul li>.desc h4~h4{
+  margin-top:20px;
+  color:gray;
+}
+#sidebar ul li>.desc hr{
+  margin:0 10px;
+}
+#sidebar ul li>.desc p a{
+  margin:0 10px;
+}
+#sidebar ul li>.desc p a:hover{
+  color:#333;
+}
 /*广告轮播*/
 #banner{
 		width:100%;

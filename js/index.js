@@ -106,7 +106,7 @@ $(()=>{
 //导航详细页
 $(()=>{
   $.get("data/index/getAllSkills.php").then(data=>{
-    console.log(data);
+
     var html="";
     for(var name of data){
       html+=`<li><a href="#"><i></i><span>${name.skill_name}</span></a>`;
@@ -118,7 +118,7 @@ $(()=>{
         html+=`<h4>${arr1[0]}</h4><hr><p>`;
         var subs=arr1[1].split(",");
         for(var j=0;j<subs.length;j++) {
-          html += `<a href="#">${subs[j]}</a>`;
+          html += `<a href="#" class="content">${subs[j]}</a>`;
         }
         html+=`</p>`;
       }
