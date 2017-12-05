@@ -66,7 +66,7 @@ body{
 		height:116px;
 		display:flex;
 		justify-content:space-between;
-		flex-wrap:no-warp;
+		flex-wrap:nowrap;
 	}
 	#conr{
 		width:200px;
@@ -133,7 +133,7 @@ body{
 		margin-right:5px;
 		padding-left:2px;
 		height:20px;
-		width:30px;
+		width:50px;
 		border-left:1px solid #2CC7C5;
 		background:#fff;
 		font-size:14px;
@@ -142,3 +142,6 @@ body{
 	#sbox>a:hover{
 		cursor:pointer;
 	}
+.user-status{
+	diaplay:inline-block
+}
