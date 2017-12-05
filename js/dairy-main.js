@@ -1,10 +1,21 @@
 $(()=>{
   var pno=1;
-  $("#container").masonry({
-    itemSelector: '.masonry-block',
-    columnWidth: 240,
-    gutter: 5
-  });
+  //删除功能
+  $("#container")
+    .on("click", ".span2", function () {
+      let id = $(this).data("id");
+      var $div = $(this).parent();
+      if (window.confirm("您确认要删除该数据吗?")) {
+        $.get("data/diary/delete.php?dairy_id=" + id)
+          .then(data => {
+            $("#container").masonry("remove", $div).masonry();
+          })
+      }
+    })
+    .on("click", ".span3", function (e) {
+      location =
+        `dairy-upload.html?iid=${e.target.dataset.id}`;
+    });
   function append(){
     $.get("data/diary/getAll.php",{pno})
       .then(result=> {
@@ -25,26 +36,18 @@ $(()=>{
               </ul>
           </div>`
         }
-        var $html = $(html);
-        //删除功能
-        $html
-          .on("click", ".span2", function () {
-            let id = $(this).data("id");
-            var $div = $(this).parent();
-            if (window.confirm("您确认要删除该数据吗?")) {
-              $.get("data/diary/delete.php?dairy_id=" + id)
-                .then(data => {
-                  $("#container").masonry("remove", $div).masonry();
-                })
-            }
-          })
-          .on("click", ".span3", function (e) {
-            location =
-              `dairy-upload.html?iid=${e.target.dataset.id}`;
-          });
-        $("#container").append($html)
-          .masonry("appended", $html)
-          .masonry();
+        if($('#container').html()==""){
+          $('#container').append(html);
+          setTimeout(()=>{
+            $('#container').masonry({
+              itemSelector: '.masonry-block'
+            });
+          },100);
+        }else{
+          var $html=$(html);
+          $('#container').append($html)
+            .masonry("appended",$html);
+        }
         $("#loading").hide();
         timer=null;
       });
