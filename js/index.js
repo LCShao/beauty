@@ -26,15 +26,16 @@ $(()=>{
 $(()=>{
     $.get("data/index/banner.php")
         .then(data=>{
-            const LIWIDTH=1920;
+            const LIWIDTH=innerWidth;
+            $("#banner").css("width",LIWIDTH);
             var htmlImgs="";//保存图片li的HTML片段
             //for(var i=0;i<data.length;i++){
             //var p=data[i];
             data.push(data[0]);
             for(var p of data){
-                htmlImgs+=`<li>
+                htmlImgs+=`<li style="width:${LIWIDTH}px">
               <a href="${p.href}" title="${p.title}">
-                <img src="${p.img}">
+                <img style="width:${LIWIDTH}px" src="${p.img}">
               </a>
             </li> `;
             }

@@ -177,11 +177,8 @@
 #banner ul.banner-img{
 		position:absolute; left:0;
 	}
-#banner ul.banner-img>li{float:left;width:1900px;}
-#banner ul.banner-img img{
-		width:1900px;
-		height:384px;
-	}
+#banner ul.banner-img>li{float:left;}
+#banner ul.banner-img img{height:384px;}
 #banner ul.indicators{
 		position:absolute;
 		bottom:30px;
