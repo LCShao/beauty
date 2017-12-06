@@ -1,5 +1,5 @@
 $(()=>{
-  var pno=1;
+  var pno=1,canLoad=true;
   //删除功能
   $("#container")
     .on("click", ".span2", function () {
@@ -45,11 +45,14 @@ $(()=>{
           },100);
         }else{
           var $html=$(html);
-          $('#container').append($html)
-            .masonry("appended",$html);
+          $('#container').append($html);
+          setTimeout(()=>{
+            $('#container').masonry("appended",$html);
+          },50)
         }
         $("#loading").hide();
         timer=null;
+        canLoad=true;
       });
   }
   append();
@@ -57,10 +60,11 @@ $(()=>{
   $(window).off().scroll(()=>{
     var scrollTop=$("html,body").scrollTop();
     var offsetTop=$("#footer").offset().top;
-    if(offsetTop<=scrollTop+innerHeight){
+    if(canLoad&&offsetTop<=scrollTop+innerHeight){
       $("#loading").show();
       pno++;
       clearTimeout(timer);
+      canLoad=false;
       timer=setTimeout(append,1000);
     }
   })
