@@ -1,3 +1,27 @@
+$(()=>{
+  function isLogin(){
+    $.get("data/index/isLogin.php").then(data=>{
+      if(data.ok==1){
+        $("#login").hide().next().show().children().first().html(data.uname);
+      }else{
+        $("#login").show().next().hide();
+      }
+    });
+  }
+  $("#header").load("index-head.html",()=>{
+    isLogin();
+    $("#login>:first-child").click(()=>{
+      location="login.html?back="+location.pathname
+    });
+    $("#welcome>:last-child").click(e=>{
+      e.preventDefault();
+      $.get("data/index/logout.php").then(()=>{
+        location.reload(true);
+      });
+    })
+  });
+  $("#footer").load("index-footer.html");
+});
 //美丽方案
 $(function(){
     $(".item-list").on("mouseenter","li",function(){
