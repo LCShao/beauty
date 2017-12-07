@@ -97,7 +97,7 @@ var imgs=[
   "20171123820171123171035562271889747",
 ];
 for(var i=0,strs1=[],strs2=[];i<arrs.length;i++){
-  strs1[i]=`('${arrs[i][0]}','${arrs[i][1]}',${parseInt(Math.random()*62+1)},'${arrs[i][2]}','${arrs[i][3]}','${arrs[i][4]}','${arrs[i][5]}','${arrs[i][6]}',${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0})`;
+  strs1[i]=`('${arrs[i][0]}','${arrs[i][1]}',${parseInt(Math.random()*62+1)},'${arrs[i][2]}','${arrs[i][3]}','${arrs[i][4]}','${arrs[i][5]}','${arrs[i][6]}',${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0},${Math.random()<0.3?parseInt(Math.random()*6+1):0},${parseInt(Math.random()*4+2)/10})`;
   var r=parseInt(Math.random()*5+3);
   for(var j=0;j<r;j++){
     var pic=imgs[parseInt(Math.random()*43)];

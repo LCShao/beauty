@@ -1,47 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index-head.css">
-    <link rel="stylesheet" href="css/product-details.css">
-</head>
-<body>
-<div id="header"></div>
-<div id="product-details">
-    <div id="preview">
-        <div id="mediumDiv">
-            <img id="mImg" src="img/safe-shopping/20171128620171128133408705675619262_226.jpg">
-            <div id="mask"></div>
-            <div id="superMask"></div>
-        </div>
-        <div id="largeDiv"></div>
-        <h1>
-            <a class="backward disabled"></a>
-            <a class="forward"></a>
-            <ul id="icon_list">
-              <li>
-                <img src="img/loading.gif" alt="加载中..." >
-              </li>
-            </ul>
-        </h1>
-    </div>
-    <!--3.2 右上 ：文字信息 #show-details width:490px-->
-    <div id="show-details">
-        <h3>
-            【自体脂肪填充】全面部自体脂肪填充 送水光针 名师操作 返现2880元
+$(()=> {
+  $("#icon_list").on("mouseover","img",function(){
+    var $img=$(this);
+    console.log($img);
+    $("#mImg").attr("src","img/safe-shopping/"+$img.data("md"));
+    $("#largeDiv").css("backgroundImage",`url(img/safe-shopping/${$img.data("md")})`);
+  });
+  $.get(
+    "data/products/product-details.php",
+    {pid:location.search.split("=")[1]}
+    ).then(output=>{
+      var data=output.info;
+
+      var imgs=output.imgs;
+      console.log(imgs);
+      var html=`<h3>
+            ${"【"+data.kword.split(",").join("】【")+"】"+data.title}
         </h3>
         <div class="price">
             <div class="stu-price">
                 <b>新氧价：</b>
-                <span>¥${p.price}</span>
+                <span>¥${data.newPrice}</span>
             </div>
             <ul class="top-title">
                 <li><span></span><i></i></li>
-                <li><span>1</span>相关日记</li>
-                <li><span>99</span>累计预约</li>
+                <li><span>${data.d_count}</span>相关日记</li>
+                <li><span>${data.yy_count}</span>累计预约</li>
             </ul>
         </div>
         <!-- 客服 -->
@@ -65,8 +48,8 @@
         <div class="spec clear">
             <p>支付方式：</p>
             <div>
-                <p>预约金 <span>￥7960</span></p>
-                <p>到院再付 <span>￥31840</span></p>
+                <p>预约金 <span>￥${data.newPrice*data.pay}</span></p>
+                <p>到院再付 <span>￥${data.newPrice*(1-data.pay)}</span></p>
             </div>
         </div>
         <!-- 数量 -->
@@ -87,12 +70,13 @@
                 <br>
                 收藏
             </a>
-        </div>
-    </div>
-    <div style="clear:both"></div>
-</div>
-<script src="js/jquery-3.2.1.js"></script>
-<script src="js/index-header.js"></script>
-<script src="js/products-details.js"></script>
-</body>
-</html>
+        </div>`;
+      $("#show-details").html(html);
+      $("#mImg").attr("src","img/safe-shopping/"+imgs[0].md);
+      html="";
+      for(var img of imgs){
+        html+=`<li class="i1"><img src="img/safe-shopping/${img.sm}" data-md="${img.md}"></li>`
+      }
+      $("#icon_list").html(html);
+    })
+});
