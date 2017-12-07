@@ -110,6 +110,7 @@ body{
 		border-radius:30px;
 		border:1px solid #2CC7C5;
 		margin-top:40px;
+		position:relative;
 	}
 	#headCenter>#sbox>i{
 		display:block;
@@ -128,10 +129,10 @@ body{
 	}
 #shelper{
 	left: 320px;
-	width: 400px;
+	width: 500px;
 	overflow: hidden;
 	position: absolute;
-	z-index: 1;
+	z-index: 10;
 	left: -1px;
 	top: 36px;
 	border: 1px solid #ccc;
@@ -156,6 +157,16 @@ body{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+}
+#shelper .search-item>span{
+  display:inline-block;
+  float:left;
+  width:400px;
+  height:40px;
+}
+#shelper .search-item>b{
+  display:inline-block;
+  float:right;
 }
 	#sbox>a{
 		display:block;

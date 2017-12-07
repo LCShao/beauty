@@ -26,7 +26,7 @@
 	background:-webkit-linear-gradient(left,#80BFFE,#4FF0C8);
 	}
 #navall .banner-ul{
-	z-index:50;
+	z-index:1;
 }
 #navall ul li{
 		float:left;
