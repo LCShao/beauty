@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header></header>
+    <div class="main">
+        <div class="pay_box">
+            <div class="path_a"><img src="img/cart/pay_path_1.png" alt=""></div>
+            <div class="titlebar">确认购买产品</div>
+            <table class="tlist_a">
+                <tbody>
+                <tr>
+                    <th width="420">产品名称</th>
+                    <th>新氧价</th>
+                    <th>优惠</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td class="con">
+                        <a target="_blank" href="#" class="pic">
+                            <img src="img/cart/20171109020171109170654350115983937_226.jpg" alt="" width="60" height="60">
+                        </a>
+                        <div class="c">
+                            <p class="title"><a target="_blank" href="#">【润百颜玻尿酸1ml】黑金版大分子 打鼻子打下巴 塑形更好看 更持久 维持12个月 买一赠一</a></p>
+                            <p class="name"><a target="_blank" href="#"></a></p>
+                            <p class="time">有效期：一个月</p>
+                        </div>
+                    </td>
+                    <td><span class="vm or">¥777</span>
+                        <br><del>¥4800</del></td>
+                    <td>
+                    </td>
+                    <td><a target="_blank" href="#">在线客服</a><br></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="button">
+                <ul class="list">
+                    <li>
+					<span class="num">
+					<label id="bindspan">18210275598</label>
+					</span>已绑手机号
+                    </li>
+                    <li>
+                        <span class="num">¥<label id="tmp_online_pay">777</label>.00</span>商品金额
+                    </li>
+                    <li class="bottom">
+                        <span class="num or">¥<label id="tmp_pay">155</label>.00</span>支付预约金
+                    </li>
+                    <li class="bottom">
+                        <span class="num">¥<label id="tmp_again">622</label>.00</span>到院再付
+                    </li>
+                </ul>
+                <div class="btn_line">
+                    <input type="button" onclick="pay.addOrder()" class="btn" value="去付款">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

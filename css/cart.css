@@ -1,0 +1,56 @@
+.main{
+    width:960px;
+    margin:0 auto;
+}
+ul,li{
+    list-style: none;
+}
+.pay_path_pic {
+    display: block;
+    margin: 0 auto;}
+.pay_box {
+    padding: 60px 56px 56px;
+    border-radius: 8px;
+    background: #fff;
+    margin-top: 16px;
+}
+.pay_box .titlebar {
+    font-size: 20px;
+    color: #00a8d6;
+    border-left: solid 2px #85d0ef;
+    padding-left: 8px;
+    margin-bottom: 18px;
+}.pay_box .tlist_a {
+     width: 882px;
+     border-color: #e3ebed;
+     color: #96a3a6;
+ }
+.tlist_a {
+    width: 996px;
+    border: solid 1px #ddd;
+    /*border-width: 1px 0 0 1px;*/
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.tlist_a .con .pic {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+.tlist_a .con .c {
+    float: left;
+    width: 314px;
+    text-align: left;
+    padding-left: 15px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.pay_box .button {
+    padding-top: 40px;
+    text-align: right;
+    font-size: 14px;
+}
+

@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/diary.css">
+    <link rel="stylesheet" href="css/product-details.css">
+
 </head>
 <body>
+<div class="dairy-main">
+    <div class="diary-body">
+        <img src="img/login/logo.png" width=100px;>
+        <ul class="diary-items">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">直播</a></li>
+            <li><a href="#" class="item-active">美丽日记</a></li>
+            <li><a href="#">安心购</a></li>
+            <li><a href="#">医院</a></li>
+            <li><a href="#">医生</a></li>
+            <li id="item-sublist"><a href="#">圈子</a>
+                <ul class="sub-items">
+                    <li><a href="#">圈子</a></li>
+                    <li><a href="#">活动</a></li>
+                    <li><a href="#">专题</a></li>
+                    <li><a href="#">达人</a></li>
+                </ul>
+            </li>
+            <li><a href="#">项目宝典</a></li>
+            <li><a href="#">云诊所</a></li>
+        </ul>
+        <p id="login" style="display:block"><a href="#">登录</a>&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;<a href="#">注册</a></p>
+        <p id="welcome" style="display:none">Welcome <a href="#">xxx</a>&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;<a href="#">注销</a></p>
+    </div>
+    <div id="diary-info">
+        <a href="#" class="diary-info-active">首页</a>
+        <a href="#">预约</a>
+        <a href="#">相册</a>
+    </div>
+</div>
 <div id="product-details">
     <div id="preview">
         <div id="mediumDiv">
-            <img id="mImg" src="img/product/md/584b5678Nbc9f1e70.jpg">
+            <img id="mImg" src="img/safeShopping/20171128620171128133408705675619262_226.jpg">
             <div id="mask"></div>
             <div id="superMask"></div>
         </div>
@@ -17,39 +51,54 @@
             <a class="backward disabled"></a>
             <a class="forward"></a>
             <ul id="icon_list">
-                <img src="img/loading.gif" alt="加载中..." >
-                <!-- <li class="i1"><img src="${pic.sm}" data-md="${pic.md}" data-lg="${pic.lg}"></li> -->
+                <!--<img src="img/loading.gif" alt="加载中..." >-->
+                 <li class="i1"><img src="img/safeShopping/20171128620171128133408705675619262_226.jpg" data-md="${pic.md}" data-lg="${pic.lg}"></li>
+                 <li class="i1"><img src="img/safeShopping/20171128620171128133408705675619262_226.jpg" data-md="${pic.md}" data-lg="${pic.lg}"></li>
+                 <li class="i1"><img src="img/safeShopping/20171128620171128133408705675619262_226.jpg" data-md="${pic.md}" data-lg="${pic.lg}"></li>
+                 <li class="i1"><img src="img/safeShopping/20171128620171128133408705675619262_226.jpg" data-md="${pic.md}" data-lg="${pic.lg}"></li>
+                 <li class="i1"><img src="img/safeShopping/20171128620171128133408705675619262_226.jpg" data-md="${pic.md}" data-lg="${pic.lg}"></li>
             </ul>
         </h1>
     </div>
     <!--3.2 右上 ：文字信息 #show-details width:490px-->
     <div id="show-details">
-        <h1>${p.title}</h1>
         <h3>
-            <a href="javascript:;">${p.subtitle}</a>
+            【自体脂肪填充】全面部自体脂肪填充 送水光针 名师操作 返现2880元
         </h3>
         <div class="price">
             <div class="stu-price">
-                <b>学员售价：</b>
+                <b>新氧价：</b>
                 <span>¥${p.price}</span>
             </div>
-            <div class="promise">
-                服务承诺：<b>${p.promise}</b>
-            </div>
+            <ul class="top-title">
+                <li><span></span><i></i></li>
+                <li><span>1</span>相关日记</li>
+                <li><span>99</span>累计预约</li>
+            </ul>
         </div>
         <!-- 客服 -->
-        <p class="parameter">
-            <b>客服：</b>
-            <span>联系客服</span>
-            <img src="img/product_detail/kefuf.gif">
-        </p>
+        <div class="parameter">
+            <b>服务项：</b>
+            <ul class="service-items">
+                <li><img src="" alt="">氧气保</li>
+                <li><img src="" alt="">闪电退</li>
+                <li><img src="" alt="">写日记新氧返现800元</li>
+                <li><img src="" alt="">详情</li>
+            </ul>
+        </div>
+        <div class="parameter">
+            <b>App专享：</b>
+            <div class="app-p">
+                <p><i></i><span>支持分期</span><b>|</b><span>￥2994.02 ×12期，支持美分宝、小额白条</span></p>
+                <p><i></i><span>氧气抵扣</span><b>|</b><span>氧分抵扣预约金300元</span></p>
+            </div>
+        </div>
         <!-- 规格 -->
         <div class="spec clear">
-            <p>规格：</p>
+            <p>支付方式：</p>
             <div>
-                <!-- <a href="product-details.html?lid=${laptop.lid}" class=${
-                  laptop.lid===details.lid?"active":""
-                }>{laptop.spec}</a> -->
+                <p>预约金 <span>￥7960</span></p>
+                <p>到院再付 <span>￥31840</span></p>
             </div>
         </div>
         <!-- 数量 -->
@@ -63,7 +112,7 @@
         <div class="shops">
             <a href="javascript:;" class="buy">立即购买</a>
             <a href="javascript:;" class="cart">
-                加入购物车
+                咨询医院
             </a>
             <a href="javascript:;" class="collection">
                 <img src="img/product_detail/product_detail_img6.png">
@@ -72,42 +121,9 @@
             </a>
         </div>
     </div>
-    <!--3.3 下 ：为你推荐 #recommend -->
-    <div id="recommend">
-        <p>
-            为你推荐
-            <span>大家都在看</span>
-        </p>
-        <div id="demo" class="clear">
-            <div id="demo1">
-                <div class="details_1 lf">
-                    <div class="detail_img1">
-                        <img src="img/product_detail/product_detail_1.png">
-                    </div>
-                    <p>ThinkPad New S2 (20GUA00QCD)13.3英寸超霸</p>
-                </div>
-                <div class="details_1 lf">
-                    <div class="detail_img1">
-                        <img src="img/product_detail/product_detail_2.png">
-                    </div>
-                    <p>戴尔 DELL燃7000 R1605S 超霸</p>
-                </div>
-                <div class="details_1 lf">
-                    <div class="detail_img1">
-                        <img src="img/product_detail/product_detail_3.png">
-                    </div>
-                    <p>戴尔(DELL)魔方15MF Pro-R2505TSS灵</p>
-                </div>
-                <div class="details_1 lf">
-                    <div class="detail_img1">
-                        <img src="img/product_detail/product_detail_4.png">
-                    </div>
-                    <p>联想(Lenovo) YOGA900 (YOGA4 PRO)多彩版</p>
-                </div>
-            </div>
-        </div>
-    </div>
     <div style="clear:both"></div>
 </div>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/products-details.js"></script>
 </body>
 </html>
