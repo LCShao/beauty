@@ -83,7 +83,6 @@ $(()=>{
 //导航详细页
 $(()=>{
   $.get("data/index/getAllSkills.php").then(data=>{
-    console.log(data);
     var html="";
     for(var name of data){
       html+=`<li><a href="#"><i></i><span>${name.skill_name}</span></a>`;

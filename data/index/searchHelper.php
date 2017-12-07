@@ -12,6 +12,5 @@ if($kw){
 	$sql.=" where ".implode(" and ",$kws);
 }
 $sql.=" order by yy_count desc limit 10 ";
-var_dump($sql);
 $result=mysqli_query($conn,$sql);
 echo json_encode(mysqli_fetch_all($result,1));
