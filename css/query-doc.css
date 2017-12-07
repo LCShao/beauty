@@ -68,9 +68,9 @@ ul.btmul li{
 }
 .rightText{
     float:left;
-    margin-left:65px;
+    margin-left:20px;
     height:100%;
-    width:70%;
+    width:60%;
 }
 
 .rightText p{
@@ -98,7 +98,6 @@ ul.btmul li{
 }
 .doc-pic-name{
     height:100%;
-    width:30%;
     float:left;
 }
 .rightText{
