@@ -1,8 +1,9 @@
 /*上层图标样式*/
-	.main{
+#footer>.main{
 		background:#E6F4F9;
-		width:100%;
-		margin-top:50px;
+		width:1200px;
+		margin:50px auto;
+
 	}
 	#icon #icon-list{
 		width:100%;
@@ -12,7 +13,7 @@
 	}
 	#icon #icon-list>li{
 		float:left;
-		margin-left:120px;
+		margin-left:117px;
 		color:#54E4DA;
 		font-size:14px;
 		width:160px;
@@ -48,7 +49,7 @@
 	}
 	.main div:nth-child(1)~div{
 		float:left;
-		margin-left:175px;
+		margin-left:150px;
 		margin-top:50px;
 		margin-bottom:50px;
 	}

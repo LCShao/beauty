@@ -7,8 +7,9 @@ body{
 }
 /*head-top样式*/
 	.headTop{
+		margin:0 auto;
 		height:30px;
-		width:100%;
+		max-width: 960px;
 		border:1px solid transparent;
 		background:#F3F7F7;
 		font-size:12px;
@@ -57,16 +58,14 @@ body{
 		height:13px;
 		background-image:url("../img/images/xyapp.png");
 	}
-	.headTop{
-		padding:0 100px;
-	}
 /*head样式*/	
 	.head{
-		width:100%;
+		width:960px;
 		height:116px;
 		display:flex;
 		justify-content:space-between;
 		flex-wrap:nowrap;
+    margin:0 auto;
 	}
 	#conr{
 		width:200px;

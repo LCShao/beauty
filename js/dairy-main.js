@@ -42,7 +42,7 @@ $(()=>{
             $('#container').masonry({
               itemSelector: '.masonry-block'
             });
-          },100);
+          },150);
         }else{
           var $html=$(html);
           $('#container').append($html);
@@ -57,8 +57,8 @@ $(()=>{
   }
   append();
   var timer=null;
-  $(window).off().scroll(()=>{
-    var scrollTop=$("html,body").scrollTop();
+  $(window).scroll(()=>{
+    var scrollTop=$("body").scrollTop();
     var offsetTop=$("#footer").offset().top;
     if(canLoad&&offsetTop<=scrollTop+innerHeight){
       $("#loading").show();
