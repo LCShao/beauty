@@ -25,9 +25,6 @@
 	margin-left:-480px;
 	background:-webkit-linear-gradient(left,#80BFFE,#4FF0C8);
 	}
-#navall .banner-ul{
-	z-index:50;
-}
 #navall ul li{
 		float:left;
 		font-size:18px;

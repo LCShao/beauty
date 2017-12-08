@@ -58,6 +58,7 @@ $(()=>{
   append();
   var timer=null;
   $(window).scroll(()=>{
+    console.log("Hello");b
     var scrollTop=$("body").scrollTop();
     var offsetTop=$("#footer").offset().top;
     if(canLoad&&offsetTop<=scrollTop+innerHeight){

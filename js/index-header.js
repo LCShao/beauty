@@ -47,6 +47,7 @@ $(()=>{
         $(e.target).prev().hide()
       },200);
     }).keyup(e=>{
+      console.log(e.keyCode);
       var $shelper=$(e.target).prev();
       switch(e.keyCode){
         case 38:
@@ -87,8 +88,9 @@ $(()=>{
       location="product-details.html?pid="+$(e.target).parent().parent().data("product_id");
     })
     if(location.search.indexOf("kw=")!=-1){
-      $("#sbox>input").val(location.search.split("=")[1])
+      $("#sbox>input").val(decodeURIComponent(location.search.split("=")[1]))
     }
   });
   $("#footer").load("index-footer.html");
+
 });

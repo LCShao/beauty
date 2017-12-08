@@ -107,6 +107,7 @@ ul,li{
     width: 100%;
     height: 50px;
     background-color: #84D8D0;
+    z-index:190;
 }
 .nav-box{
     margin:0px auto;
@@ -336,10 +337,13 @@ ul,li{
     text-decoration:none;
     color: #777;
 }
-#selector5 .select-ul li:hover,#selector5 .select-ul a:hover{
+#selector5 .select-ul li.hover,#selector5 .select-ul li:not(.price):hover{
     background: #fff;
     color: #2CC7C5;
     border-right: 1px solid #fff;
+}
+#selector5 .select-ul li.price{
+    width:250px;
 }
 #selector5 .select-ul li input{
     height:70%;
@@ -394,6 +398,7 @@ ul,li{
     color: #777;
     letter-spacing: .69px;
 }
+#loading{text-align:center}
 
 
 

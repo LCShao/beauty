@@ -1,27 +1,3 @@
-$(()=>{
-  function isLogin(){
-    $.get("data/index/isLogin.php").then(data=>{
-      if(data.ok==1){
-        $("#login").hide().next().show().children().first().html(data.uname);
-      }else{
-        $("#login").show().next().hide();
-      }
-    });
-  }
-  $("#header").load("index-head.html",()=>{
-    isLogin();
-    $("#login>:first-child").click(()=>{
-      location="login.html?back="+location.pathname
-    });
-    $("#welcome>:last-child").click(e=>{
-      e.preventDefault();
-      $.get("data/index/logout.php").then(()=>{
-        location.reload(true);
-      });
-    })
-  });
-  $("#footer").load("index-footer.html");
-});
 //美丽方案
 $(function(){
     $(".item-list").on("mouseenter","li",function(){
@@ -45,7 +21,6 @@ $(function(){
 
     $.get("data/safe-shopping/safe-shopping.php")
         .then(data=>{
-            console.log(data);
             let html="";
             if(data.length>0){
                 for(let i of data){
@@ -81,4 +56,84 @@ $(function(){
             }
             $("#operation").html(html);
         })
+})
+
+$(()=>{
+  var pno=1, canLoad=true, sort="zn", min=0,max=99999999;
+  function loadProducts(pno){
+    $.get(
+      "data/products/getProductsByKw.php",
+      {kw:location.search.split("=")[1],pno,sort,min,max}
+      ).then(output=>{
+        var data=output.data;
+        if(data.length!=0){
+          var html="";
+          for(var p of data){
+            html+=`<div class="pro-div">
+          <img src="img/safe-shopping/${p.sm}" >
+          <div>
+              <p class="top-info">${"【"+p.kword.split(",").join("】【")+"】 "+p.title}</p>
+              <p class="hoc">${p.hospital}</p>
+              <p class="con-l"><i>¥</i>${parseFloat(p.newPrice).toFixed(2)} <s>¥${parseFloat(p.oldPrice).toFixed(2)}</s></p>
+              <h4>预约:${p.yy_count}, 日记:${p.d_count}</h4>
+              <h5>评分:${p.score}</h5>
+          </div>
+        </div>`;
+          }
+          var $div=$(".select-div");
+          if($div.children().length==0)
+            $div.html(html);
+          else
+            $div.append(html);
+          canLoad=true;
+          $("#loading").hide();
+        }
+      });
+  }
+  loadProducts(pno);
+  $(window).off().scroll(()=>{
+    var scrollTop=$("html,body").scrollTop();
+    var offsetTop=$("#footer").offset().top;
+    if(canLoad&&offsetTop<=scrollTop+innerHeight) {
+      $("#loading").show();
+      canLoad = false;
+      loadProducts(++pno);
+    }
+  });
+  $(".select-ul").on("click","li:not(.price)",function(e){
+    e.preventDefault();
+    var $li=$(this);
+    if(!$li.is(":contains(确定)")){
+      if($li.is(":contains(价格)")){
+        if(sort=="jga")
+          sort="jgd";
+        else
+          sort="jga";
+      }else if(!$li.hasClass("hover")){
+        switch($li.children("a").html()){
+          case "销量最多":
+            sort="xl";
+            break;
+          case "案例最多":
+            sort="al";
+            break;
+          case "评分最高":
+            sort="pf";
+            break;
+          case "最新上架":
+            sort="zx";
+            break;
+        }
+      }
+      $li.addClass("hover").siblings().removeClass("hover");
+    }else{
+      var $txts=$li.siblings(".price").children();
+      min=parseFloat($txts.first().html().trim());
+      if(isNaN(min)) min=0;
+      max=parseFloat($txts.last().html().trim());
+      if(isNaN(max)) max=99999999;
+    }
+    $(".select-div").empty();
+    loadProducts(pno);
+  })
 })
