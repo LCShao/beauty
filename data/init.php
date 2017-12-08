@@ -5,8 +5,8 @@ $db_user = 'root';
 $db_password = '';
 $db_database = 'beauty';
 
-/*新浪云mysql服务器地址*/
-/*$db_host = 'r.rdc.sae.sina.com.cn';
+/*新浪云mysql服务器地址
+$db_host = 'r.rdc.sae.sina.com.cn';
 $db_user = 'x0zm4j2ok0';
 $db_password = 'l20m1y33iklwywxxm1z2m5jj5m1w052x10zxww3k';
 $db_database = 'app_angilla';*/
