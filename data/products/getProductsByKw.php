@@ -16,7 +16,7 @@ if($kw){
   for($i=0;$i<count($kws);$i++){
     $kws[$i]=" (products.title like '%".$kws[$i]."%' or  kword like '%".$kws[$i]."%') ";
   }
-	$sql.=implode(" and ",$kws);
+	$sql.=" and ".implode(" and ",$kws);
 }
 
 $result=mysqli_query($conn,$sql);

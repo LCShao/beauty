@@ -60,7 +60,7 @@ $(function(){
 
 $(()=>{
   var pno=1, canLoad=true, sort="zn", min=0,max=99999999;
-  function loadProducts(pno){
+  function loadProducts(){
     $.get(
       "data/products/getProductsByKw.php",
       {kw:location.search.split("=")[1],pno,sort,min,max}
@@ -86,18 +86,21 @@ $(()=>{
           else
             $div.append(html);
           canLoad=true;
-          $("#loading").hide();
+        }else{
+          pno--;
         }
+        $("#loading").hide();
       });
   }
-  loadProducts(pno);
+  loadProducts();
   $(window).off().scroll(()=>{
     var scrollTop=$("html,body").scrollTop();
     var offsetTop=$("#footer").offset().top;
     if(canLoad&&offsetTop<=scrollTop+innerHeight) {
       $("#loading").show();
       canLoad = false;
-      loadProducts(++pno);
+      pno++;
+      loadProducts();
     }
   });
   $(".select-ul").on("click","li:not(.price)",function(e){
@@ -134,6 +137,7 @@ $(()=>{
       if(isNaN(max)) max=99999999;
     }
     $(".select-div").empty();
-    loadProducts(pno);
+    pno=1;
+    loadProducts();
   })
 })
