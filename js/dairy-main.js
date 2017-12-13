@@ -58,9 +58,9 @@ $(()=>{
   append();
   var timer=null;
   $(window).scroll(()=>{
-    console.log("Hello");b
-    var scrollTop=$("body").scrollTop();
+    var scrollTop=$("body,html").scrollTop();
     var offsetTop=$("#footer").offset().top;
+    console.log(offsetTop,scrollTop+innerHeight);
     if(canLoad&&offsetTop<=scrollTop+innerHeight){
       $("#loading").show();
       pno++;
