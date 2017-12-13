@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>上传日记</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/diary.css">
+  <link rel="stylesheet" href="css/index-footer.css">
     <style>
         .drop_area,
         .drop_area2{
@@ -36,10 +39,16 @@
         select{
             width:200px;
         }
+        div.main{
+          width:100%;
+          margin:0 auto;
+        }
+
     </style>
 </head>
 <body>
-    <div class="main">
+<header id="header" ></header>
+    <div id="upload" class="main">
         <!--<form action="data/diary/dairy-upload.php" method="post" enctype="multipart/form-data">-->
             <!--<label for="file">文件名</label>-->
             <!--<input type="file" name="mypic" id="file"/> <br/>-->
@@ -75,8 +84,9 @@
         <a href="" class="btn-save">保存</a>
     </form>
     </div>
-
+    <footer id="footer"></footer>
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/dairy-upload.js"></script>
 </body>
 </html>
