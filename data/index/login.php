@@ -1,6 +1,7 @@
 <?php
-
-header("Content-Type:application/json");
+header("Access-Control-Allow-Origin: http://localhost:8080");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Access-Control-Allow-Credentials: true');
 require_once("../init.php");
 
 @$u=$_REQUEST["uname"];
@@ -13,8 +14,7 @@ $row=mysqli_fetch_row($result);
 if($row!=null){
   session_start();
   $_SESSION["uid"]=$row[0];
-	echo '{"code":1}';
-	exit;
+	echo json_encode(["code"=>1]);
 }else{
-	echo '{"code":0,"msg":"用户名密码错误"}';
-};
+	echo json_encode(["code"=>0,"msg"=>"用户名密码错误"]);
+}
