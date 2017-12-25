@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: http://localhost:8080");
 header("Content-Type:application/json");
 require_once("../init.php");
 $pageSize=10;
